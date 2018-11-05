@@ -34,7 +34,7 @@ int main( int argc, char * * argv )
 	 * size n-1.
 	 */
 	
-	bool * a = malloc( ( n - 1 ) * sizeof( int ) ); 
+	bool * a = malloc( ( n - 1 ) * sizeof( bool ) ); 
 
 	/*
 	 * The array, a, is populated with the numbers from 2 to n inclusive.

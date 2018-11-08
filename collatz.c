@@ -8,7 +8,7 @@ int main()
 
 	while ( n > 1 )
 	{
-		printf( "> %d\n", n );
+		printf( "%d\n", n );
 		
 		if ( n % 2 )
 		{
@@ -20,7 +20,7 @@ int main()
 		}
 	}
 
-	printf( "> %d <\n", n );
+	printf( "> %d\n", n );
 
 	return 0;
 }

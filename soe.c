@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
+#include <string.h> // memset
 
 int main( int argc, char * * argv )
 {
@@ -37,20 +39,19 @@ int main( int argc, char * * argv )
 	bool * a = malloc( ( n - 1 ) * sizeof( bool ) ); 
 
 	/*
-	 * The array, a, is populated with the numbers from 2 to n inclusive.
+	 * The array, a, is populated with truthy values.
 	 */
 
-	for ( int i = 0; i < n - 1; i++ )
-	{
-		a[ i ] = true;
-	}
-
+	memset( a, true, ( n - 1 ) * sizeof( bool ) );
 
 
 
 	for ( int i = 0; i < n - 1; i++ )
 	{
-		printf( "%d\n", a[i] );
+		if ( a[i] )
+		{
+			printf( "%d\n",  i + 2 );
+		}
 	}
 
 	/*
